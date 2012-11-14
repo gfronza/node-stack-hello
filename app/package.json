@@ -1,15 +1,39 @@
 {
-  "name": "app",
-  "version": "0.0.0",
+  "name": "backbone-sample",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Germano/backbone-sample",
+  "author": {
+    "name": "Germano Fronza",
+    "email": "germano.inf@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Germano/backbone-sample.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Germano/backbone-sample/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/Germano/backbone-sample/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "app",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
   "scripts": {
-    "start" : "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt test",
+    "start": "node app"
   },
-  "dependencies":{
-      "express" : "",
-      "mongodb" : ""
+  "dependencies": {
+    "express": "3.0.0rc5",
+    "mongoose": "*"
   },
-  "repository": "",
-  "author": "",
-  "license": "BSD"
+  "devDependencies": {
+    "grunt": "~0.3.17"
+  },
+  "keywords": []
 }
