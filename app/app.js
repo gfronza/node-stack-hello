@@ -57,7 +57,7 @@ var user = process.env['DOTCLOUD_DB_MONGODB_LOGIN'] || undefined;
 var pass = process.env['DOTCLOUD_DB_MONGODB_PASSWORD'] || undefined;
 
 var opts = (user && pass) ? { server: { auto_reconnect: true }, user: user, pass: pass } : { server: { auto_reconnect: true } };
-var db = mongoose.createConnection(host, 'test', port, opts);
+var db = mongoose.createConnection(host, 'helloworld', port, opts);
 
 wines.init(mongoose, db);
 
