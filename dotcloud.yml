@@ -5,9 +5,6 @@ www:
         app: node app.js
     config:
         node_version: v0.8.x
-www:
-  type: static
-  approot: app/public
 
 db:
     type: mongodb
