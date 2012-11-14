@@ -2,14 +2,14 @@
   "name": "backbone-sample",
   "description": "The best project ever.",
   "version": "0.1.0",
-  "homepage": "https://github.com/Germano/backbone-sample",
+  "homepage": "https://github.com/gfronza/node-stack-hello",
   "author": {
     "name": "Germano Fronza",
     "email": "germano.inf@gmail.com"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Germano/backbone-sample.git"
+    "url": "https://github.com/gfronza/node-stack-hello.git"
   },
   "bugs": {
     "url": "https://github.com/Germano/backbone-sample/issues"
