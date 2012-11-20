@@ -50,14 +50,15 @@ app.post('/api/wines', function (req, res){
   res.send(200, "OK");
 });
 
-var host = process.env['DOTCLOUD_DB_MONGODB_HOST'] || 'localhost';
-var port = process.env['DOTCLOUD_DB_MONGODB_PORT'] ||  27017;
+var host = process.env['DOTCLOUD_DB_MONGODB_HOST'] || 'helloworld-gfronza-db-0.azva.dotcloud.net';
+var port = process.env['DOTCLOUD_DB_MONGODB_PORT'] ||  40992;
 port = parseInt(port);
-var user = process.env['DOTCLOUD_DB_MONGODB_LOGIN'] || undefined;
-var pass = process.env['DOTCLOUD_DB_MONGODB_PASSWORD'] || undefined;
+var username = process.env['DOTCLOUD_DB_MONGODB_LOGIN'] || 'root';
+var password = process.env['DOTCLOUD_DB_MONGODB_PASSWORD'] || 'CGXz6Qxb1zCTjFPA3uOq';
 
-var opts = (user && pass) ? { server: { auto_reconnect: true }, user: user, pass: pass } : { server: { auto_reconnect: true } };
-var db = mongoose.createConnection(host, 'helloworld', port, opts);
+var opts = { server: { auto_reconnect: true }, user: username, pass: password }
+db = mongoose.createConnection(host, 'admin', port, opts)
+
 
 wines.init(mongoose, db);
 

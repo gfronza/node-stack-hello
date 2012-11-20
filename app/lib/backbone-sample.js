@@ -2,9 +2,9 @@ var mongoose;
 var db;
 var WineModel;
 
-exports.init = function(aMongoose, aDB) {
+exports.init = function(aMongoose, aDb) {
     mongoose = aMongoose;
-    db = aDB;
+    db = aDb;
 
     Wine = mongoose.Schema({
         "country": { type: String }, 
@@ -32,8 +32,4 @@ exports.getWine = function(id, callback) {
 exports.addWine = function(wine, callback) {
     var wine = new WineModel(wine);
     wine.save(callback);
-}
-
-exports.awesome = function() {
-    return "awesome";
 }
